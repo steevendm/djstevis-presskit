@@ -1831,6 +1831,13 @@ document.querySelectorAll('.btn1,.btn2,.nbtn').forEach(btn => {
     });
   });
 
+  // ── Logo / DJ STEVIS → retour accueil (slide 0) ─────────────────────────
+  var navLogo = document.querySelector('#nav .nl');
+  if(navLogo){
+    navLogo.style.cursor = 'pointer';
+    navLogo.addEventListener('click', function(){ goTo(0); });
+  }
+
   function updateDots(){dotsWrap.querySelectorAll('.cin-dot').forEach((d,i)=>d.classList.toggle('dot-active',i===current));}
 
   function fixGalleryMobile(el){
